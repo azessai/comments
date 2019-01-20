@@ -19,13 +19,24 @@
         <div class="header">
 
           <label>Name:</label>
-          <input type="text" ng-model="yourName" placeholder="Enter a name">
+          <input type="text" ng-model="query" placeholder="Enter un filtre">
+          <select ng-model="ordre">
+            <option value="username">Organiser par nom</option>
+            <option value="content">Organiser par content</option>
+          </select>
           <hr>
-          <h1>Hello {{yourName}}!</h1>
-          <hr>
-          <input type="text" ng-model="nbr1">
-          <input type="text" ng-model="nbr2">
-          {{"La somme : "+ (1*nbr1 + 1*nbr2)}}
+          <div ng-init="users=[
+            {username:'Marc', content:'x coucou'},
+            {username:'Jean', content:'n coucou'},
+            {username:'Pierre', content:'a coucou'}]">
+            <div ng-repeat="user in users | filter:{content: query} | orderBy:ordre">
+              <p>
+                <strong>{{user.username | uppercase}}</strong><br>
+                {{user.content}}
+              </p>
+            </div>
+          </div>
+
 
         </div>
       <div class="footer">        

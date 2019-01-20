@@ -1,0 +1,22 @@
+{
+  "name": "exo",
+  "version": "0.0.1",
+  "description": "exo angular Azeddine",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Azeddine ES SAI",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest"
+  },
+  "devDependencies": {
+    "express": "latest",
+    "serve-index": "latest"
+  }
+}
